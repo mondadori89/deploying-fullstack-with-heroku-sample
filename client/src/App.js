@@ -23,7 +23,7 @@ function App() {
     activityService
       .getNewActivity()
       .then(data => {
-        setNewActivity(data.activity)
+        setNewActivity(data.kind)
       })
   }, [])
 
@@ -31,7 +31,7 @@ function App() {
     activityService
       .getNewActivity()
       .then(data => {
-        setNewActivity(data.activity)
+        setNewActivity(data.kind)
       })
   }
 
@@ -46,7 +46,7 @@ function App() {
     activityService
       .getNewActivity()
       .then(data => {
-        setNewActivity(data.activity)
+        setNewActivity(data.kind)
       })
   }
 
