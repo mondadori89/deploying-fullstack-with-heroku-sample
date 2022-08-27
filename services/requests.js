@@ -28,14 +28,14 @@ const getAllActivities = (req, res) => {
 }
 
 const getSingleActivity = (req, res) => {
-  fetch('https://www.boredapi.com/api/activity') // fetch activity from bored API - https://www.boredapi.com/about
+  fetch('https://www.reddit.com/search.json?q=spacex') // fetch activity from bored API - https://www.boredapi.com/about
     .then(data => data.json()) // return a promise containing the response
     .then(json => res.json(json)) // extract the JSON body content from the response (specifically the activity value) and sends it to the client
     .catch((err) => console.log(err)) // log errors to the console
 }
 
 const addActivityToDB = (req, res) => {
-  const activity = [ req.body.activity ]
+  const activity = [ req.body.kind ]
 
   const addString = 'INSERT INTO my_activities (activity) VALUES ($1) RETURNING *'; // insert value into my_activities' table
 
